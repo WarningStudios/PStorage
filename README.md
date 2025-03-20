@@ -73,61 +73,60 @@ Use the following scripts:
 
 
  # Scripts: Paste all the following code in the 'World Code' window 
- # (you'll reach it by the 'World Code'-Button in any code block) 
- /**/
-function PStorage_saveKey(playerId, key, value)
-{
-	try{
-	oldStorageString = api.getMoonstoneChestItemSlot(playerId, 5).attributes.customDisplayName
-	} 
-	catch(error)
+ # (you'll reach it by the 'World Code'-Button in any code block)
+	function PStorage_saveKey(playerId, key, value)
 	{
-	oldStorageString = "{}"
-	}
-	const newStorageString = __P__updateJSON(oldStorageString, key, value)
-	attributes = {}
-	attributes.customDisplayName = newStorageString
-	api.setMoonstoneChestItemSlot(playerId, 5, "Chest", 1, attributes)
-}
-
-
-function PStorage_getKey(playerId, key)
-{
 		try{
-		storageString = api.getMoonstoneChestItemSlot(playerId, 5).attributes.customDisplayName
+		oldStorageString = api.getMoonstoneChestItemSlot(playerId, 5).attributes.customDisplayName
+		} 
+		catch(error)
+		{
+		oldStorageString = "{}"
+		}
+		const newStorageString = __P__updateJSON(oldStorageString, key, value)
+		attributes = {}
+		attributes.customDisplayName = newStorageString
+		api.setMoonstoneChestItemSlot(playerId, 5, "Chest", 1, attributes)
+	}
+
+
+	function PStorage_getKey(playerId, key)
+	{
+		try{
+			storageString = api.getMoonstoneChestItemSlot(playerId, 5).attributes.customDisplayName
 		}
 		catch(error)
 		{
-		storageString = "{}"
+			storageString = "{}"
 		}
-	const storage = __P__loadJSON(storageString)
-	returnValue = storage[key]
-	return returnValue
-}
+		const storage = __P__loadJSON(storageString)
+		returnValue = storage[key]
+		return returnValue
+	}
 
 
-function PStorage_clearAll(playerId)
-{
-api.setMoonstoneChestItemSlot(playerId, 5, "Chest", 1, {customDisplayName: "{}"})
-}
+	function PStorage_clearAll(playerId)
+	{
+	api.setMoonstoneChestItemSlot(playerId, 5, "Chest", 1, {customDisplayName: "{}"})
+	}
 
 
-/*
-Note that the following functions are used in the program, dont use them in your own scripts. 
-But they are essential!!!
-*/
+	/*
+	Note that the following functions are used in the program, dont use them in your own scripts. 
+	But they are essential!!!
+	*/
 
-function __P__loadJSON(savedString) 
-{
-    const obj = JSON.parse(savedString);
-    return obj;
-}
+	function __P__loadJSON(savedString) 
+	{
+   		const obj = JSON.parse(savedString);
+    		return obj;
+	}
 
 
-function __P__updateJSON(jsonText, key, newValue) 
-{
-    const jsonObj = JSON.parse(jsonText);
-    jsonObj[key] = newValue;
-    return JSON.stringify(jsonObj, null, 2);
-}
+	function __P__updateJSON(jsonText, key, newValue) 
+	{
+    	const jsonObj = JSON.parse(jsonText);
+    	jsonObj[key] = newValue;
+    	return JSON.stringify(jsonObj, null, 2);
+	}
 
