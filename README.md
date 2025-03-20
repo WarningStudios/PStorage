@@ -4,7 +4,7 @@
 	This is an engine that can save any data in the bloxd.io moonstone chest.
 	You are free to use this in your own lobby with any information like a board 
 	or a message that shows that you use PStorageEngine by WarningStudios.
- 	Some examples are [here](./EXAMPLES.md).
+ 	Some examples are [here](./EXAMPLES.md)
 
 
 # IMPORTANT:
