@@ -16,13 +16,12 @@
 	Save a value under a specific name.
 
 
-		Parameters
-			- playerId: The ID of the player who saves
-			- key: A specific name to identify the value
-			- value: A value in any type
+		
+			@param playerId: The ID of the player who saves
+			@param key: A specific name to identify the value
+			@param value: A value in any type
 	
-		Results
- 			- null
+ 			@return null
 	 
 	Note that if a key existed before, it will be replaced.
 	*/
@@ -37,12 +36,11 @@
 	/*
 	Get a value that was saved under a specific key.
 
-		Parameters
-			- playerId: The ID of the player who has saved the value
-			- key: The key that identifies the saved value
+		
+			@param playerId: The ID of the player who has saved the value
+			@param key: The key that identifies the saved value
 
-		Results
- 			- any type: value that was saved
+ 			@return any type: value that was saved
 
 	This doesn't change the value!
 	*/
@@ -55,11 +53,10 @@
 	/*
 	Clear all saved values
 
-		Parameters
- 			- playerId: The ID of the player whose values should be deleted
+		
+			@param playerId: The ID of the player whose values should be deleted
 
-		Results
- 			- null
+			@result null
 
 		PStorage_clearAll(playerId: PlayerID)
 
@@ -126,9 +123,9 @@ Use the following scripts:
 
 	function __P__updateJSON(jsonText, key, newValue) 
 	{
-    	const jsonObj = JSON.parse(jsonText);
-    	jsonObj[key] = newValue;
-    	return JSON.stringify(jsonObj, null, 2);
+    		const jsonObj = JSON.parse(jsonText);
+	    	jsonObj[key] = newValue;
+    		return JSON.stringify(jsonObj, null, 2);
 	}
 
 ```
