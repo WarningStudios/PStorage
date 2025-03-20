@@ -1,4 +1,3 @@
-
 Save score
 ```javascript
         var score = 17
