@@ -16,18 +16,18 @@
 	Save a value under a specific name.
 
 
-	Parameters
-		- playerId: The ID of the player who saves
-		- key: A specific name to identify the value
-		-	value: A value in any type
+		Parameters
+			- playerId: The ID of the player who saves
+			- key: A specific name to identify the value
+			- value: A value in any type
 	
-	Results
- 		- null
+		Results
+ 			- null
 	 
 	Note that if a key existed before, it will be replaced.
 	*/
 
-	PStorage_saveKey(playerId: PlayerID, key: string, value: any)
+		PStorage_saveKey(playerId: PlayerID, key: string, value: any)
 
 
 
@@ -37,17 +37,17 @@
 	/*
 	Get a value that was saved under a specific key.
 
-	Parameters
-		- playerId: The ID of the player who has saved the value
-		- key: The key that identifies the saved value
+		Parameters
+			- playerId: The ID of the player who has saved the value
+			- key: The key that identifies the saved value
 
-	Results
- 		- any type: value that was saved
+		Results
+ 			- any type: value that was saved
 
 	This doesn't change the value!
 	*/
 
-	PStorage_getKey(playerId, PlayerID, key: string)
+		PStorage_getKey(playerId, PlayerID, key: string)
  
 
 
@@ -55,13 +55,13 @@
 	/*
 	Clear all saved values
 
-	Parameters
- 		- playerId: The ID of the player whose values should be deleted
+		Parameters
+ 			- playerId: The ID of the player whose values should be deleted
 
-	Results
- 		- null
+		Results
+ 			- null
 
-	PStorage_clearAll(playerId: PlayerID)
+		PStorage_clearAll(playerId: PlayerID)
 
 	*/
 
@@ -108,7 +108,7 @@ Use the following scripts:
 
 	function PStorage_clearAll(playerId)
 	{
-	api.setMoonstoneChestItemSlot(playerId, 5, "Chest", 1, {customDisplayName: "{}"})
+		api.setMoonstoneChestItemSlot(playerId, 5, "Chest", 1, {customDisplayName: "{}"})
 	}
 
 
