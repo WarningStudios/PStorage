@@ -69,16 +69,12 @@ PStorage_clearAll(playerId: PlayerID)
 
 Use the following scripts:
 
- ||
- ||
- ||
-\  /
- \/
+
 
 
  # Scripts: Paste all the following code in the 'World Code' window 
  # (you'll reach it by the 'World Code'-Button in any code block) 
- 
+ /**/
 function PStorage_saveKey(playerId, key, value)
 {
 	try{
