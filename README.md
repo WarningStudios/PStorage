@@ -11,9 +11,9 @@
 	reset or change them if they can access a moonstone chest.
 
 # USE:
-
-/*
-Save a value under a specific name.
+	´´´javascript
+	/*
+	Save a value under a specific name.
 
 
 	Parameters
@@ -24,18 +24,18 @@ Save a value under a specific name.
 	Results
  		- null
 	 
-Note that if a key existed before, it will be replaced.
-*/
+	Note that if a key existed before, it will be replaced.
+	*/
 
-PStorage_saveKey(playerId: PlayerID, key: string, value: any)
-
-
+	PStorage_saveKey(playerId: PlayerID, key: string, value: any)
 
 
 
 
-/*
-Get a value that was saved under a specific key.
+
+
+	/*
+	Get a value that was saved under a specific key.
 
 	Parameters
 		- playerId: The ID of the player who has saved the value
@@ -44,16 +44,16 @@ Get a value that was saved under a specific key.
 	Results
  		- any type: value that was saved
 
-This doesn't change the value!
-*/
+	This doesn't change the value!
+	*/
 
-PStorage_getKey(playerId, PlayerID, key: string)
+	PStorage_getKey(playerId, PlayerID, key: string)
  
 
 
 
-/*
-Clear all saved values
+	/*
+	Clear all saved values
 
 	Parameters
  		- playerId: The ID of the player whose values should be deleted
@@ -61,9 +61,9 @@ Clear all saved values
 	Results
  		- null
 
-PStorage_clearAll(playerId: PlayerID)
+	PStorage_clearAll(playerId: PlayerID)
 
-
+	*/
 
 
 
@@ -73,6 +73,8 @@ Use the following scripts:
 
 
  # Scripts: Paste all the following code in the 'World Code' window (you'll reach it by the 'World Code'-Button in any code block)
+
+ 	´´´javascript
 	function PStorage_saveKey(playerId, key, value)
 	{
 		try{
