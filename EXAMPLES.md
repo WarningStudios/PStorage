@@ -35,3 +35,5 @@ Get Item
         Output: "Cheap Sword"
         */
 ```
+One idea: Save the amount of ticks in it and use them to create timed delays!
+It's yours!
